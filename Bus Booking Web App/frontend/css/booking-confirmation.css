@@ -1,0 +1,276 @@
+ /* =====================================================
+    BOOKING CONFIRMATION PAGE
+===================================================== */
+
+.confirmation-page {
+    min-height: calc(100vh - 70px);
+    padding: 50px 20px;
+    background: #f5f7fb;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.confirmation-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* =====================================================
+   SUCCESS ICON
+===================================================== */
+
+.confirmation-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+    color: #16a34a;
+
+    font-size: 36px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.confirmation-container h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.confirmation-subtitle {
+    margin: 0 0 30px;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   CONFIRMATION CARD
+===================================================== */
+
+.confirmation-card {
+    background: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    border: 1px solid #e5e7eb;
+
+    text-align: left;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.04);
+
+    margin-bottom: 20px;
+}
+
+.confirmation-card h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   CONFIRMATION ROW
+===================================================== */
+
+.confirmation-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 10px 0;
+}
+
+.confirmation-row span {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.confirmation-row strong {
+    font-size: 15px;
+    text-align: right;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.confirmation-divider {
+    height: 1px;
+
+    background: #e5e7eb;
+
+    margin: 12px 0;
+}
+
+
+/* =====================================================
+   INFORMATION BOX
+===================================================== */
+
+.confirmation-info {
+    padding: 16px 18px;
+
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    background: #eff6ff;
+
+    border: 1px solid #bfdbfe;
+
+    text-align: left;
+}
+
+.confirmation-info strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 15px;
+}
+
+.confirmation-info p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.confirmation-message {
+    min-height: 20px;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   CONFIRM BUTTON
+===================================================== */
+
+.confirm-button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #16a34a;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.confirm-button:hover {
+    background: #15803d;
+}
+
+.confirm-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back-button {
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 13px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background: #f9fafb;
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .confirmation-page {
+        padding: 35px 15px;
+    }
+
+    .confirmation-container h1 {
+        font-size: 26px;
+    }
+
+    .confirmation-card {
+        padding: 20px;
+    }
+
+    .confirmation-row {
+        align-items: flex-start;
+    }
+
+    .confirmation-row strong {
+        max-width: 55%;
+    }
+
+}

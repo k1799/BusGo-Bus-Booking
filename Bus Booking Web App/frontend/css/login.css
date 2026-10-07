@@ -1,0 +1,509 @@
+/* =========================================================
+BUSGO - LOGIN PAGE CSS
+Used only by login.html
+
+common.css handles:
+
+Header
+Navigation
+Form basics
+Buttons
+Footer
+
+This file handles only Login page specific design.
+========================================================= */
+
+/* =========================================================
+
+LOGIN PAGE
+Main area of the login screen
+========================================================= */
+
+.login-page {
+
+    /* min-height: calc(100vh - 140px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 20px;
+
+    padding: 50px 20px;
+
+    background-image:
+        
+        url("../images/BUSGO\ Coach\ at\ Sunset.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+
+    min-height: 100vh;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 20px;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.60)),
+        url("../images/BUSGO\ Coach\ at\ Sunset.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+.login-brand {
+    position: absolute;
+
+    top: 30px;
+    left: 40px;
+
+    color: #ffffff;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    z-index: 2;
+}
+
+.login-brand span {
+    font-size: 15px;
+
+    margin-left: 5px;
+
+    padding: 4px 8px;
+
+    border-radius: 5px;
+
+    background-color: rgba(255, 255, 255, 0.15);
+
+    /* color: #be26b6; */
+}
+
+.login-copyright {
+    position: absolute;
+
+    bottom: 20px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 13px;
+
+    z-index: 2;
+}
+
+/* =========================================================
+2. LOGIN CONTAINER
+Controls the maximum width of login card
+========================================================= */
+
+.login-container {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    margin: 0 auto;
+
+    transform: translateY(-90px);
+}
+
+/* =========================================================
+3. LOGIN CARD
+White box containing the login form
+========================================================= */
+
+.login-card {
+
+    /* background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    padding: 35px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); */
+
+    /* background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 12px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.30); */
+
+    width: 100%;
+    max-width: 430px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 14px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================================
+4. LOGIN HEADING
+========================================================= */
+
+.login-card h1 {
+
+    text-align: center;
+
+    color: #111827;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+
+}
+
+.login-description {
+
+    text-align: center;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+
+}
+
+/* =========================================================
+5. LOGIN FORM
+========================================================= */
+
+.login-form {
+
+    width: 100%;
+
+}
+
+/* Form group spacing */
+
+.login-form .form-group {
+
+    margin-bottom: 20px;
+
+}
+
+/* =========================================================
+6. REMEMBER ME ROW
+========================================================= */
+
+.remember-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+
+}
+
+/* Remember Me */
+
+.remember-me {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+/* Checkbox */
+
+.remember-me input[type="checkbox"] {
+
+    width: auto;
+
+    margin: 0;
+
+    cursor: pointer;
+
+}
+
+/* Checkbox label */
+
+.remember-me label {
+
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    font-weight: normal;
+
+    cursor: pointer;
+
+}
+
+/* =========================================================
+7. FORGOT PASSWORD
+========================================================= */
+
+.forgot-password {
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+}
+
+.forgot-password {
+
+    text-decoration: underline;
+
+}
+
+/* =========================================================
+8. LOGIN BUTTON
+========================================================= */
+
+.login-button {
+
+    width: 100%;
+
+    padding: 12px 20px;
+
+    background-color: #2563eb;
+
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+.login-button:hover {
+
+    background-color: #1d4ed8;
+
+}
+
+/* =========================================================
+9. REGISTER LINK
+========================================================= */
+
+.register-link {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e5e7eb;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+}
+
+.register-link a {
+
+    color: #2563eb;
+
+    font-weight: 600;
+
+}
+
+.register-link a:hover {
+
+    text-decoration: underline;
+
+}
+
+/* =========================================================
+10. LOGIN MESSAGE
+JavaScript will use this for:
+
+Error
+Success
+========================================================= */
+
+.login-message {
+
+    display: none;
+
+    padding: 10px 12px;
+
+    margin-bottom: 18px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    text-align: center;
+
+}
+
+/* Error message */
+
+.login-message.error {
+
+    display: block;
+
+    background-color: #fee2e2;
+
+    color: #b91c1c;
+
+    border: 1px solid #fecaca;
+
+}
+
+/* Success message */
+
+.login-message.success {
+
+    display: block;
+
+    background-color: #dcfce7;
+
+    color: #166534;
+
+    border: 1px solid #bbf7d0;
+
+}
+
+/* =====================================================
+   PASSWORD SHOW / HIDE
+   ===================================================== */
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 45px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    padding: 0;
+    margin: 0;
+}
+
+/* =========================================================
+11. RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .login-page {
+
+        padding: 35px 20px;
+    }
+
+
+    .login-card {
+
+        padding: 28px;
+    }
+
+
+    .login-card h1 {
+
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .login-page {
+
+        padding: 30px 15px;
+    }
+
+
+    .login-card {
+
+        padding: 22px;
+    }
+
+
+    .remember-row {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .login-brand {
+        top: 20px;
+        left: 20px;
+
+        font-size: 24px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .login-copyright {
+        bottom: 12px;
+
+        font-size: 11px;
+    }
+
+}
+
+/* =========================================================
+END OF LOGIN CSS
+========================================================= */

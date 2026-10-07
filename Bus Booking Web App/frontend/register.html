@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusGo - Register</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="./css/common.css">
+
+    <!-- Register Page CSS -->
+    <link rel="stylesheet" href="./css/register.css">
+
+</head>
+
+<body>
+    <!-- =====================================================
+     HEADER
+     Common header used across the website
+     ===================================================== -->
+    <!-- <header>
+
+        <div class="header-container"> -->
+
+    <!-- Website Logo -->
+    <!-- <h2 class="logo">BusGo</h2>
+
+        </div>
+
+    </header> -->
+
+
+    <!-- =====================================================
+     MAIN REGISTRATION AREA
+     ===================================================== -->
+    <main>
+
+        <section class="register-page">
+
+            <div class="register-brand">
+                BusGo
+            </div>
+
+            <div class="register-container">
+
+                <!-- Registration Card -->
+                <div class="register-card">
+
+                    <!-- Heading -->
+                    <h1>Create Your Account</h1>
+
+                    <p class="register-description">
+                        Register with BusGo to book and manage your bus tickets.
+                    </p>
+
+
+                    <!-- Register Message
+                     JavaScript will use this later
+                     for error/success messages -->
+                    <div id="registerMessage" class="register-message"></div>
+
+
+                    <!-- =================================================
+                     REGISTRATION FORM
+                     ================================================= -->
+                    <form id="registerForm" class="register-form">
+
+                        <!-- Full Name -->
+                        <div class="form-group">
+
+                            <label for="name">Full Name</label>
+
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                        </div>
+
+
+                        <!-- Email -->
+                        <div class="form-group">
+
+                            <label for="email">Email</label>
+
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                        </div>
+
+
+                        <!-- Phone -->
+                        <div class="form-group">
+
+                            <label for="phone">Phone Number</label>
+
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                        </div>
+
+
+                        <!-- Password -->
+                        <div class="form-group">
+
+                            <label for="password">Password</label>
+
+                            <div class="password-wrapper">
+
+                                <input type="password" id="password" name="password" placeholder="Create a password"
+                                    required>
+
+                                <button type="button" class="password-toggle" id="passwordToggle"
+                                    aria-label="Show password">
+                                    👁
+                                </button>
+
+                            </div>
+
+                            <p class="password-info">
+                                Password should contain at least 6 characters.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Confirm Password -->
+                        <div class="form-group">
+
+                            <label for="confirmPassword">Confirm Password</label>
+
+                            <div class="password-wrapper">
+
+                                <input type="password" id="confirmPassword" name="confirmPassword"
+                                    placeholder="Confirm your password" required>
+
+                                <button type="button" class="password-toggle" id="confirmPasswordToggle"
+                                    aria-label="Show password">
+                                    👁
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Register Button -->
+                        <button type="submit" class="register-button">
+                            Create Account
+                        </button>
+
+                    </form>
+
+
+                    <!-- Login Link -->
+                    <p class="login-link">
+
+                        Already have an account?
+
+                        <a href="login.html">
+                            Login here
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="register-copyright">
+                © 2026 BusGo. All Rights Reserved.
+            </div>
+            
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+     FOOTER
+     ===================================================== -->
+    <!-- <footer>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 BusGo. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer> -->
+
+
+    <!-- Register JavaScript -->
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>

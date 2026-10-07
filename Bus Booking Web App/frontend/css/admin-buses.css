@@ -1,0 +1,719 @@
+/* =========================================================
+   ADMIN BUSES PAGE CSS
+   File: admin-buses.css
+
+   This file is used only for:
+   admin/buses.html
+
+   Common admin styles are already available in:
+   admin.css
+   ========================================================= */
+
+
+/* =========================================================
+   1. BUSES PAGE
+   ========================================================= */
+
+/* .admin-buses-page {
+    min-height: 70vh;
+} */
+
+
+/* =========================================================
+   2. BUS SUMMARY
+   ========================================================= */
+
+/*
+   Shows:
+   Total Buses
+   Active
+   Disabled
+*/
+
+.bus-summary {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+/* One summary card */
+
+.bus-summary-card {
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Label */
+
+.bus-summary-card span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+/* Number */
+
+.bus-summary-card strong {
+    display: block;
+
+    color: #111318;
+
+    font-size: 27px;
+}
+
+
+/* =========================================================
+   3. BUS TABLE SECTION
+   ========================================================= */
+
+.bus-table-section {
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Section header */
+
+.bus-table-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.bus-table-header h2 {
+    margin: 0;
+
+    font-size: 20px;
+
+    color: #111318;
+}
+
+
+/* =========================================================
+   4. BUS TABLE
+   ========================================================= */
+
+.bus-management-table {
+    width: 100%;
+
+    min-width: 900px;
+
+    border-collapse: collapse;
+}
+
+
+/* Table header */
+
+.bus-management-table th {
+    padding: 13px 12px;
+
+    background-color: #f8f9fa;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #555555;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* Table data */
+
+.bus-management-table td {
+    padding: 14px 12px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    color: #333333;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* Last row */
+
+.bus-management-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* Hover */
+
+.bus-management-table tbody tr:hover {
+    background-color: #fafafa;
+}
+
+
+/* =========================================================
+   5. BUS NAME
+   ========================================================= */
+
+.bus-name-cell strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #111318;
+
+    font-size: 14px;
+}
+
+
+.bus-name-cell span {
+    color: #777777;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   6. BUS ROUTE
+   ========================================================= */
+
+.bus-route-cell {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #333333;
+
+    font-size: 12px;
+}
+
+
+.bus-route-cell .arrow {
+    color: #999999;
+}
+
+
+/* =========================================================
+   7. BUS FARE
+   ========================================================= */
+
+.bus-fare-cell {
+    color: #111318;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   8. BUS ACTIONS
+   ========================================================= */
+
+.bus-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+/* Edit */
+
+.bus-edit-button {
+    padding: 7px 11px;
+
+    border: 1px solid #ddd6fe;
+
+    border-radius: 5px;
+
+    background-color: #f5f3ff;
+
+    color: #6941c6;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.bus-edit-button:hover {
+    background-color: #ede9fe;
+}
+
+
+/* Disable */
+
+.bus-disable-button {
+    padding: 7px 11px;
+
+    border: 1px solid #fed7aa;
+
+    border-radius: 5px;
+
+    background-color: #fff7ed;
+
+    color: #c2410c;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.bus-disable-button:hover {
+    background-color: #ffedd5;
+}
+
+
+/* Activate */
+
+.bus-activate-button {
+    padding: 7px 11px;
+
+    border: 1px solid #bbf7d0;
+
+    border-radius: 5px;
+
+    background-color: #ecfdf3;
+
+    color: #16803c;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.bus-activate-button:hover {
+    background-color: #dcfce7;
+}
+
+
+/* =========================================================
+   9. ADD / EDIT BUS FORM
+   ========================================================= */
+
+/*
+   This section is hidden initially.
+
+   JavaScript can add the "show" class
+   when Add Bus or Edit is clicked.
+*/
+
+.bus-form-section {
+    display: none;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Show form */
+
+.bus-form-section.show {
+    display: block;
+}
+
+
+/* =========================================================
+   10. FORM HEADER
+   ========================================================= */
+
+.bus-form-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.bus-form-header h2 {
+    margin: 0;
+
+    color: #111318;
+
+    font-size: 20px;
+}
+
+
+/* Close / Cancel */
+
+.bus-form-close {
+    border: none;
+
+    background-color: transparent;
+
+    color: #777777;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+.bus-form-close:hover {
+    color: #111318;
+}
+
+
+/* =========================================================
+   11. BUS FORM
+   ========================================================= */
+
+.bus-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* Two-column row */
+
+.bus-form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+/* Three-column row */
+
+.bus-form-row.three-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* =========================================================
+   12. FORM GROUP
+   ========================================================= */
+
+.bus-form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.bus-form-group label {
+    color: #333333;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.bus-form-group input,
+.bus-form-group select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 6px;
+
+    background-color: #ffffff;
+
+    color: #111318;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.bus-form-group input:focus,
+.bus-form-group select:focus {
+    border-color: #00a8cc;
+
+    box-shadow: 0 0 0 2px rgba(0, 168, 204, 0.10);
+}
+
+
+/* =========================================================
+   13. BUS FORM ACTIONS
+   ========================================================= */
+
+.bus-form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding-top: 10px;
+}
+
+
+/* Save button */
+
+.save-bus-button {
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #111318;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.save-bus-button:hover {
+    background-color: #00a8cc;
+}
+
+
+/* Cancel button */
+
+.cancel-bus-button {
+    padding: 9px 17px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 6px;
+
+    background-color: #ffffff;
+
+    color: #555555;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.cancel-bus-button:hover {
+    background-color: #f3f4f6;
+}
+
+
+/* =========================================================
+   14. FORM MESSAGE
+   ========================================================= */
+
+.bus-form-message {
+    display: none;
+
+    padding: 11px 14px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+}
+
+
+/* Error */
+
+.bus-form-message.error {
+    display: block;
+
+    background-color: #fff1f2;
+
+    color: #b42318;
+
+    border: 1px solid #fecdd3;
+}
+
+
+/* Success */
+
+.bus-form-message.success {
+    display: block;
+
+    background-color: #ecfdf3;
+
+    color: #16803c;
+
+    border: 1px solid #bbf7d0;
+}
+
+.admin-buses-page {
+    min-height: 70vh;
+    flex: 1;
+}
+
+/* =========================================================
+   15. RESPONSIVE DESIGN
+   ========================================================= */
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 900px) {
+
+    .bus-summary {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .bus-form-row.three-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+
+    .bus-summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .bus-table-section {
+        padding: 20px;
+
+        overflow-x: auto;
+    }
+
+
+    .bus-table-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .bus-form-section {
+        padding: 20px;
+    }
+
+
+    .bus-form-row,
+    .bus-form-row.three-columns {
+        grid-template-columns: 1fr;
+    }
+
+
+    .bus-form-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .save-bus-button,
+    .cancel-bus-button {
+        width: 100%;
+    }
+
+}
+
+
+/* ---------- Small Mobile ---------- */
+
+@media (max-width: 480px) {
+
+    .bus-summary-card {
+        padding: 17px;
+    }
+
+
+    .bus-summary-card strong {
+        font-size: 24px;
+    }
+
+
+    .bus-table-section {
+        padding: 15px;
+    }
+
+
+    .bus-form-section {
+        padding: 17px;
+    }
+
+
+    .bus-form-header h2 {
+        font-size: 18px;
+    }
+
+}

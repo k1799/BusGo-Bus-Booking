@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BusGo - Payment</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="./css/common.css">
+
+    <!-- Payment CSS -->
+    <link rel="stylesheet" href="./css/payment.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            BusGo
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <!-- <a href="buses.html">
+                Buses
+            </a> -->
+
+            <a href="my-bookings.html">
+                My Bookings
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN PAYMENT SECTION
+    ====================================================== -->
+
+    <main class="payment-page">
+
+        <div class="payment-container">
+
+
+            <!-- =================================================
+                 PAGE TITLE
+            ================================================== -->
+
+            <div class="payment-header">
+
+                <h1>
+                    Complete Payment
+                </h1>
+
+                <p>
+                    Review your payment details and continue.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PAYMENT SUMMARY
+            ================================================== -->
+
+            <section class="payment-card">
+
+                <h2>
+                    Payment Summary
+                </h2>
+
+
+                <div class="payment-row">
+
+                    <span>
+                        Bus
+                    </span>
+
+                    <strong id="busName">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="payment-row">
+
+                    <span>
+                        Route
+                    </span>
+
+                    <strong id="route">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="payment-row">
+
+                    <span>
+                        Journey Date
+                    </span>
+
+                    <strong id="journeyDate">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="payment-row">
+
+                    <span>
+                        Selected Seats
+                    </span>
+
+                    <strong id="selectedSeats">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="payment-divider"></div>
+
+
+                <div class="payment-row">
+
+                    <span>
+                        Seat Fare
+                    </span>
+
+                    <strong id="seatFare">
+                        ₹0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="payment-row">
+
+                    <span>
+                        GST (5%)
+                    </span>
+
+                    <strong id="gstAmount">
+                        ₹0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="payment-total">
+
+                    <span>
+                        Total Amount
+                    </span>
+
+                    <strong id="totalAmount">
+                        ₹0.00
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SELECTED PAYMENT METHOD
+            ================================================== -->
+
+            <section class="payment-card">
+
+                <h2>
+                    Payment Method
+                </h2>
+
+
+                <div class="selected-payment">
+
+                    <span>
+                        Selected Method
+                    </span>
+
+                    <strong id="paymentMethod">
+                        --
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DEMO PAYMENT NOTICE
+            ================================================== -->
+
+            <div class="payment-notice">
+
+                <strong>
+                    Demo Payment
+                </strong>
+
+                <p>
+                    This is a test payment screen.
+                    No real money will be charged.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PAYMENT MESSAGE
+            ================================================== -->
+
+            <div
+                id="paymentMessage"
+                class="payment-message">
+            </div>
+
+
+
+            <!-- =================================================
+                 PAY BUTTON
+            ================================================== -->
+
+            <button
+                type="button"
+                id="payButton"
+                class="pay-button">
+
+                Pay ₹0.00
+
+            </button>
+
+
+            <!-- =================================================
+                 BACK BUTTON
+            ================================================== -->
+
+            <button
+                type="button"
+                id="backToBookingButton"
+                class="back-button">
+
+                Back to Booking
+
+            </button>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         PAYMENT JAVASCRIPT
+    ====================================================== -->
+
+    <script src="./js/payment.js"></script>
+
+</body>
+
+</html>

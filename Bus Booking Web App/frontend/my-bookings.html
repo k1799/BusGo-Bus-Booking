@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BusGo - My Bookings</title>
+
+    <!-- Common styles -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- My Bookings page styles -->
+    <link rel="stylesheet" href="css/my-bookings.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+    <header>
+
+        <div class="header-container">
+
+            <!-- Website Logo -->
+            <div class="logo">
+                <h2>BusGo</h2>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <!-- <a href="buses.html">Buses</a> -->
+                <a class="active" href="my-bookings.html">
+                    My Bookings
+                </a>
+                <a href="#" id="logoutLink">Logout</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+    <main class="my-bookings-page">
+
+
+        <!-- =========================
+             PAGE INTRODUCTION
+             ========================= -->
+        <section class="my-bookings-intro">
+
+            <h1>
+                My Bookings
+            </h1>
+
+            <p>
+                View and manage your bus bookings.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+          UPCOMING BOOKINGS
+         ========================= -->
+        <section class="upcoming-booking">
+
+            <h2>
+                Upcoming Journey
+            </h2>
+
+            <!-- Upcoming booking cards will be created by JavaScript -->
+            <div id="upcomingBookingsContainer">
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =========================
+             BOOKING HISTORY
+             ========================= -->
+        <section class="booking-history">
+
+            <h2>
+                Booking History
+            </h2>
+
+
+            <!-- History Table -->
+            <table class="booking-history-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Bus
+                        </th>
+
+                        <th>
+                            Route
+                        </th>
+
+                        <th>
+                            Passenger
+                        </th>
+
+                        <th>
+                            Journey Date
+                        </th>
+
+                        <th>
+                            Seat
+                        </th>
+
+                        <th>
+                            Booking ID
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="bookingHistoryBody">
+
+                </tbody>
+
+
+            </table>
+
+        </section>
+
+
+        <!-- =========================
+             NO BOOKINGS MESSAGE
+             ========================= -->
+        <section id="noBookingMessage" class="no-bookings">
+
+            <h3>
+                No Bookings Found
+            </h3>
+
+            <p>
+                You have not made any bus bookings yet.
+            </p>
+
+            <a href="buses.html" class="book-now-button">
+                Browse Available Buses
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 BusGo. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- My Bookings JavaScript -->
+    <script src="js/my-bookings.js"></script>
+
+</body>
+
+</html>

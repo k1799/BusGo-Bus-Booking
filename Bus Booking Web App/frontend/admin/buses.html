@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Buses | BusGo Admin</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+
+    <!-- Admin common CSS -->
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <!-- Bus management page CSS -->
+    <link rel="stylesheet" href="../css/admin-buses.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ADMIN HEADER
+         ===================================================== -->
+    <header class="admin-header">
+
+        <div class="admin-header-container">
+
+            <!-- Admin Logo -->
+            <a href="dashboard.html" class="admin-logo">
+                BusGo <span>Admin</span>
+            </a>
+
+            <!-- Admin Navigation -->
+            <nav class="admin-nav">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="buses.html" class="active">
+                    Buses
+                </a>
+
+                <a href="bookings.html">
+                    Bookings
+                </a>
+
+                <a href="users.html">
+                    Users
+                </a>
+
+                <!-- <a href="../index.html">
+                    Website
+                </a> -->
+
+                <a href="admin-login.html" class="logout">
+                    Logout
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+    <main class="admin-buses-page">
+
+        <div class="admin-container">
+
+
+            <!-- =================================================
+                 PAGE HEADING
+                 ================================================= -->
+            <section class="admin-page-header">
+
+                <div>
+
+                    <h1>
+                        Manage Buses
+                    </h1>
+
+                    <p>
+                        Add, edit and manage the buses available
+                        in BusGo.
+                    </p>
+
+                </div>
+
+                <!-- Add Bus Button -->
+                <button
+                    type="button"
+                    id="addBusButton"
+                    class="admin-primary-button">
+                    + Add Bus
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 BUS SUMMARY
+                 ================================================= -->
+            <section class="bus-summary">
+
+
+                <!-- Total Buses -->
+                <article class="bus-summary-card">
+
+                    <span>
+                        Total Buses
+                    </span>
+
+                    <strong id="totalBuses">
+                        0
+                    </strong>
+
+                </article>
+
+
+                <!-- Active Buses -->
+                <article class="bus-summary-card">
+
+                    <span>
+                        Active Buses
+                    </span>
+
+                    <strong id="activeBuses">
+                        0
+                    </strong>
+
+                </article>
+
+
+                <!-- Disabled Buses -->
+                <article class="bus-summary-card">
+
+                    <span>
+                        Disabled Buses
+                    </span>
+
+                    <strong id="disabledBuses">
+                        0
+                    </strong>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 BUS TABLE SECTION
+                 ================================================= -->
+            <section class="bus-table-section">
+
+                <!-- Table Header -->
+                <div class="bus-table-header">
+
+                    <div>
+
+                        <h2>
+                            Bus List
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Table Container -->
+                <div class="admin-table-container">
+
+                    <table class="bus-management-table">
+
+                        <!-- Table Header -->
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Bus
+                                </th>
+
+                                <th>
+                                    Route
+                                </th>
+
+                                <th>
+                                    Departure
+                                </th>
+
+                                <th>
+                                    Arrival
+                                </th>
+
+                                <th>
+                                    Total Seats
+                                </th>
+
+                                <th>
+                                    Fare
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Actions
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <!-- Table Data -->
+                        <tbody id="busTableBody">
+                           
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ADD / EDIT BUS FORM
+                 Hidden initially.
+                 JavaScript adds "show" class.
+                 ================================================= -->
+            <section
+                class="bus-form-section"
+                id="busFormSection">
+
+
+                <!-- Form Header -->
+                <div class="bus-form-header">
+
+                    <div>
+
+                        <h2 id="busFormTitle">
+                            Add New Bus
+                        </h2>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="bus-form-close"
+                        id="cancelBusButton">
+                        Close
+                    </button>
+
+                </div>
+
+
+                <!-- Bus Form -->
+                <form
+                    id="busForm"
+                    class="bus-form">
+
+
+                    <!-- Bus Name + Bus Number -->
+                    <div class="bus-form-row">
+
+                        <!-- Bus Name -->
+                        <div class="bus-form-group">
+
+                            <label for="busName">
+                                Bus Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="busName"
+                                name="busName"
+                                placeholder="Enter bus name"
+                                required>
+
+                        </div>
+
+
+                        <!-- Bus Number -->
+                        <div class="bus-form-group">
+
+                            <label for="busNumber">
+                                Bus Number
+                            </label>
+
+                            <input
+                                type="text"
+                                id="busNumber"
+                                name="busNumber"
+                                placeholder="Example: TN 58 AB 1234"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- From + To -->
+                    <div class="bus-form-row">
+
+                        <!-- From -->
+                        <div class="bus-form-group">
+
+                            <label for="fromLocation">
+                                From
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fromLocation"
+                                name="fromLocation"
+                                placeholder="Enter starting location"
+                                required>
+
+                        </div>
+
+
+                        <!-- To -->
+                        <div class="bus-form-group">
+
+                            <label for="toLocation">
+                                To
+                            </label>
+
+                            <input
+                                type="text"
+                                id="toLocation"
+                                name="toLocation"
+                                placeholder="Enter destination"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Time + Seats + Fare -->
+                    <div class="bus-form-row three-columns">
+
+                        <!-- Departure -->
+                        <div class="bus-form-group">
+
+                            <label for="departureTime">
+                                Departure Time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="departureTime"
+                                name="departureTime"
+                                required>
+
+                        </div>
+
+
+                        <!-- Arrival -->
+                        <div class="bus-form-group">
+
+                            <label for="arrivalTime">
+                                Arrival Time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="arrivalTime"
+                                name="arrivalTime"
+                                required>
+
+                        </div>
+
+
+                        <!-- Total Seats -->
+                        <div class="bus-form-group">
+
+                            <label for="totalSeats">
+                                Total Seats
+                            </label>
+
+                            <input
+                                type="number"
+                                id="totalSeats"
+                                name="totalSeats"
+                                value="40"
+                                min="1"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Fare + Status -->
+                    <div class="bus-form-row">
+
+                        <!-- Fare -->
+                        <div class="bus-form-group">
+
+                            <label for="fare">
+                                Fare
+                            </label>
+
+                            <input
+                                type="number"
+                                id="fare"
+                                name="fare"
+                                placeholder="Enter fare"
+                                min="1"
+                                required>
+
+                        </div>
+
+
+                        <!-- Status -->
+                        <div class="bus-form-group">
+
+                            <label for="busStatus">
+                                Status
+                            </label>
+
+                            <select
+                                id="busStatus"
+                                name="busStatus">
+
+                                <option value="ACTIVE">
+                                    Active
+                                </option>
+
+                                <option value="DISABLED">
+                                    Disabled
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Form Message -->
+                    <div
+                        id="busFormMessage"
+                        class="bus-form-message">
+                    </div>
+
+
+                    <!-- Form Buttons -->
+                    <div class="bus-form-actions">
+
+                        <button
+                            type="submit"
+                            id="saveBusButton"
+                            class="save-bus-button">
+                            Save Bus
+                        </button>
+
+                        <button
+                            type="button"
+                            id="cancelBusButtonBottom"
+                            class="cancel-bus-button">
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 BusGo. Admin Panel.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Admin Bus JavaScript -->
+    <script src="../js/admin-buses.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BusGo - Available Buses</title>
+
+    <!-- Common styles -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- Buses page styles -->
+    <link rel="stylesheet" href="css/buses.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="header-container">
+
+            <h2 class="logo">BusGo</h2>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <!-- <a href="buses.html" class="active">Buses</a> -->
+                <a href="my-bookings.html">My Bookings</a>
+                <a href="#" id="logoutLink">Logout</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <section class="buses-page">
+
+            <!-- Page title -->
+            <div class="section-title">
+                <h1>Available Buses</h1>
+
+                <p>
+                    Choose your bus and continue to seat selection.
+                </p>
+            </div>
+
+
+            <!-- ================= SEARCH SUMMARY ================= -->
+            <!-- <div class="search-summary" id="searchSummary">
+
+                <div>
+
+                    <h3>Search Details</h3> -->
+
+            <!-- Values will come from index.html search -->
+            <!-- <p>
+                        <strong>From:</strong>
+                        <span id="searchFrom"></span>
+                    </p>
+
+                    <p>
+                        <strong>To:</strong>
+                        <span id="searchTo"></span>
+                    </p>
+
+                    <p>
+                        <strong>Date:</strong>
+                        <span id="searchDate"></span>
+                    </p>
+
+                </div>
+
+            </div> -->
+
+            <div class="search-summary" id="searchSummary">
+
+                <h3>Search Details</h3>
+
+                <div class="search-details-row">
+
+                    <div class="search-detail">
+                        <span class="detail-label">From</span>
+                        <strong id="searchFrom"></strong>
+                    </div>
+
+                    <div class="route-arrow">→</div>
+
+                    <div class="search-detail">
+                        <span class="detail-label">To</span>
+                        <strong id="searchTo"></strong>
+                    </div>
+
+                    <div class="search-detail date-detail">
+                        <span class="detail-label">Journey Date</span>
+                        <strong id="searchDate"></strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= BUS LIST ================= -->
+            <!-- JavaScript will display matching buses here -->
+            <div class="bus-list" id="busesContainer"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 BusGo. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Buses page JavaScript -->
+    <script src="js/buses.js"></script>
+
+</body>
+
+</html>

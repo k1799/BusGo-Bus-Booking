@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BusGo - Bus Booking</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="./css/common.css">
+
+    <!-- Home Page CSS -->
+    <link rel="stylesheet" href="./css/home.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header>
+
+        <div class="header-container">
+
+            <!-- Website Logo -->
+            <div>
+                <h2 class="logo">BusGo</h2>
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="nav">
+
+                <a href="index.html" class="active">
+                    Home
+                </a>
+
+                <!-- <a href="buses.html">
+                    Buses
+                </a> -->
+
+                <a href="my-bookings.html">
+                    My Bookings
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+                <a href="#" id="logoutLink">
+                    Logout
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO SECTION
+             ================================================= -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-tagline">
+                    TRAVEL SIMPLE. TRAVEL SMART.
+                </p>
+
+                <h1>
+                    Book Your Bus Journey
+                    <br>
+                    With Ease
+                </h1>
+
+                <p class="hero-description">
+                    Find your bus, choose your seat and book your
+                    journey quickly and easily.
+                </p>
+
+                <!-- <a href="buses.html" class="primary-button">
+                    Find Buses
+                </a> -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SEARCH SECTION
+             ================================================= -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <h2>
+                    Search Your Journey
+                </h2>
+
+
+                <form class="search-form" id="searchForm">
+
+
+                    <!-- From -->
+                    <div class="form-group">
+
+                        <label for="from">
+                            From
+                        </label>
+
+                        <select id="from" name="from">
+
+                            <option value="">
+                                Select Location
+                            </option>
+
+                            <option value="madurai">
+                                Madurai
+                            </option>
+
+                            <option value="chennai">
+                                Chennai
+                            </option>
+
+                            <option value="coimbatore">
+                                Coimbatore
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- To -->
+                    <div class="form-group">
+
+                        <label for="to">
+                            To
+                        </label>
+
+                        <select id="to" name="to">
+
+                            <option value="">
+                                Select Location
+                            </option>
+
+                            <option value="madurai">
+                                Madurai
+                            </option>
+
+                            <option value="chennai">
+                                Chennai
+                            </option>
+
+                            <option value="coimbatore">
+                                Coimbatore
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Journey Date -->
+                    <div class="form-group">
+
+                        <label for="journeyDate">
+                            Journey Date
+                        </label>
+
+                        <input type="date" id="journeyDate" name="journeyDate" required>
+
+                    </div>
+
+
+
+                    <!-- Search Button -->
+                    <div>
+
+                        <button type="submit" class="primary-button">
+                            Search Buses
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- =================================================
+             ABOUT SECTION
+             ================================================= -->
+
+        <section class="about-section" id="about">
+
+            <div class="about-content">
+
+                <h2>
+                    About BusGo
+                </h2>
+
+                <p>
+                    BusGo is a simple online bus booking platform
+                    where passengers can search buses, select seats
+                    and book their journey online.
+                </p>
+
+
+                <div class="about-highlight">
+
+                    <p>
+                        Simple booking. Easy seat selection.
+                        Comfortable travel.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WHY CHOOSE US
+             ================================================= -->
+
+        <section class="why-section">
+
+
+            <div class="section-title">
+
+                <h2>
+                    Why Choose BusGo?
+                </h2>
+
+            </div>
+
+
+
+            <div class="feature-cards">
+
+
+                <!-- Feature 1 -->
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Easy Booking
+                    </h3>
+
+                    <p>
+                        Search and book your bus in a few
+                        simple steps.
+                    </p>
+
+                </article>
+
+
+
+                <!-- Feature 2 -->
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Choose Your Seat
+                    </h3>
+
+                    <p>
+                        Select your preferred seat before
+                        confirming your booking.
+                    </p>
+
+                </article>
+
+
+
+                <!-- Feature 3 -->
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Manage Bookings
+                    </h3>
+
+                    <p>
+                        View your booked tickets from
+                        your account.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTACT SECTION
+             ================================================= -->
+
+        <section class="contact-section" id="contact">
+
+
+            <div class="section-title">
+
+                <h2>
+                    Contact Us
+                </h2>
+
+            </div>
+
+
+
+            <div class="contact-info">
+
+
+                <!-- Email -->
+                <div class="contact-card">
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+                        support@busgo.com
+                    </p>
+
+                </div>
+
+
+
+                <!-- Phone -->
+                <div class="contact-card">
+
+                    <h3>
+                        Phone
+                    </h3>
+
+                    <p>
+                        +91 98765 43210
+                    </p>
+
+                </div>
+
+
+
+                <!-- Location -->
+                <div class="contact-card">
+
+                    <h3>
+                        Location
+                    </h3>
+
+                    <p>
+                        Madurai, Tamil Nadu
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 BusGo. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script>
+
+        // =====================================================
+        // CHECK LOGIN
+        // =====================================================
+
+        const token = localStorage.getItem("token");
+
+        if (!token) {
+
+            // Customer is not logged in
+            window.location.href = "login.html";
+
+        }
+
+        
+        document.getElementById("searchForm").addEventListener("submit", function (event) {
+
+            // Prevent page reload
+            event.preventDefault();
+
+            // Get selected values
+            const from = document.getElementById("from").value;
+            const to = document.getElementById("to").value;
+            const journeyDate = document.getElementById("journeyDate").value;
+
+            // Journey date input
+            const journeyDateInput = document.getElementById("journeyDate");
+
+            // Get today's date using local time
+            const today = new Date();
+
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, "0");
+            const day = String(today.getDate()).padStart(2, "0");
+
+            const todayDate = `${year}-${month}-${day}`;
+
+            // Prevent selecting yesterday or an earlier date
+            journeyDateInput.min = todayDate;
+
+            // Check From
+            if (from === "") {
+                alert("Please select departure location");
+                return;
+            }
+
+            // Check To
+            if (to === "") {
+                alert("Please select destination");
+                return;
+            }
+
+            // Check same location
+            if (from === to) {
+                alert("From and To locations cannot be the same");
+                return;
+            }
+
+            // Check date
+            if (journeyDate === "") {
+                alert("Please select journey date");
+                return;
+            }
+
+            if (journeyDateInput.value < todayDate) {
+                alert("Past dates are not allowed. Please select today or a future date.");
+                return;
+            }
+
+            // Send search values to buses page
+            window.location.href =
+                "buses.html?from=" + encodeURIComponent(from) +
+                "&to=" + encodeURIComponent(to) +
+                "&journeyDate=" + encodeURIComponent(journeyDate);
+        });
+
+        const logoutLink = document.getElementById("logoutLink");
+
+        if (logoutLink) {
+
+            logoutLink.addEventListener("click", function (event) {
+
+                event.preventDefault();
+
+                // Remove JWT token
+                localStorage.removeItem("token");
+
+                // Remove user information
+                localStorage.removeItem("userId");
+                localStorage.removeItem("userName");
+                localStorage.removeItem("userEmail");
+                localStorage.removeItem("userRole");
+
+                // Remove selected bus / journey information
+                localStorage.removeItem("journeyDate");
+                localStorage.removeItem("selectedBusId");
+                localStorage.removeItem("selectedBusName");
+                localStorage.removeItem("selectedBusNumber");
+                localStorage.removeItem("selectedBusFare");
+                localStorage.removeItem("selectedBusSource");
+                localStorage.removeItem("selectedBusDestination");
+                localStorage.removeItem("selectedBusDeparture");
+                localStorage.removeItem("selectedBusArrival");
+
+                // Go back to login
+                window.location.href = "login.html";
+
+            });
+
+        }
+    </script>
+
+</body>
+
+</html>

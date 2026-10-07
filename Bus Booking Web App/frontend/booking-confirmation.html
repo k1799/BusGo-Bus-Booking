@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>BusGo - Confirm Booking</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="./css/common.css">
+
+    <!-- Booking Confirmation CSS -->
+    <link rel="stylesheet" href="./css/booking-confirmation.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            BusGo
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <!-- <a href="buses.html">
+                Buses
+            </a> -->
+
+            <a href="my-bookings.html">
+                My Bookings
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="confirmation-page">
+
+        <div class="confirmation-container">
+
+
+            <!-- =================================================
+                 SUCCESS ICON
+            ================================================== -->
+
+            <div class="confirmation-icon">
+                ✓
+            </div>
+
+
+            <!-- =================================================
+                 TITLE
+            ================================================== -->
+
+            <h1>
+                Payment Successful
+            </h1>
+
+            <p class="confirmation-subtitle">
+
+                Your payment has been completed successfully.
+
+            </p>
+
+
+
+            <!-- =================================================
+                 BOOKING SUMMARY
+            ================================================== -->
+
+            <section class="confirmation-card">
+
+                <h2>
+                    Booking Summary
+                </h2>
+
+
+                <div class="confirmation-row">
+
+                    <span>
+                        Bus
+                    </span>
+
+                    <strong id="busName">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="confirmation-row">
+
+                    <span>
+                        Route
+                    </span>
+
+                    <strong id="route">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="confirmation-row">
+
+                    <span>
+                        Journey Date
+                    </span>
+
+                    <strong id="journeyDate">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="confirmation-row">
+
+                    <span>
+                        Selected Seats
+                    </span>
+
+                    <strong id="selectedSeats">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="confirmation-divider">
+                </div>
+
+
+                <div class="confirmation-row">
+
+                    <span>
+                        Payment Method
+                    </span>
+
+                    <strong id="paymentMethod">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="confirmation-row">
+
+                    <span>
+                        Amount Paid
+                    </span>
+
+                    <strong id="paymentAmount">
+                        ₹0.00
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INFORMATION
+            ================================================== -->
+
+            <div class="confirmation-info">
+
+                <strong>
+                    Ready to confirm your booking
+                </strong>
+
+                <p>
+
+                    Your seats will be booked after
+                    confirming the booking below.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MESSAGE
+            ================================================== -->
+
+            <div
+                id="confirmationMessage"
+                class="confirmation-message">
+            </div>
+
+
+
+            <!-- =================================================
+                 CONFIRM BOOKING BUTTON
+            ================================================== -->
+
+            <button
+                type="button"
+                id="confirmBookingButton"
+                class="confirm-button">
+
+                Confirm Booking
+
+            </button>
+
+
+
+            <!-- =================================================
+                 BACK BUTTON
+            ================================================== -->
+
+            <button
+                type="button"
+                id="backToPaymentButton"
+                class="back-button">
+
+                Back to Payment
+
+            </button>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="./js/booking-confirmation.js"></script>
+
+</body>
+
+</html>

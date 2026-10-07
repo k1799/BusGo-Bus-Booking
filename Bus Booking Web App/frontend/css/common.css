@@ -1,0 +1,754 @@
+/* =========================================================
+   BUSGO - COMMON CSS
+   Used by customer pages and admin pages
+   ========================================================= */
+
+
+/* =========================================================
+   1. RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    flex: 1;
+}
+
+/* =========================================================
+   2. BODY
+   ========================================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f5f7fa;
+
+    color: #222;
+
+    line-height: 1.6;
+
+    /* Add these */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   3. LINKS
+   ========================================================= */
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+/* =========================================================
+   4. IMAGES
+   ========================================================= */
+
+img {
+    max-width: 100%;
+
+    display: block;
+}
+
+
+/* =========================================================
+   5. COMMON CONTAINER
+   ========================================================= */
+
+.container {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   6. HEADER
+   ========================================================= */
+
+header {
+    background-color: #111827;
+
+    color: #ffffff;
+}
+
+/* =========================================================
+   PAYMENT / CONFIRMATION NAVBAR
+   ========================================================= */
+
+.navbar {
+    min-height: 70px;
+
+    padding: 0 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* Navbar navigation */
+
+.navbar nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+/* Navbar links */
+
+.navbar nav a {
+    color: #ffffff;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.navbar nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* Header inner container */
+
+.header-container {
+    width: 90%;
+
+    max-width: 1200px;
+
+    min-height: 70px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   7. LOGO
+   ========================================================= */
+
+.logo {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   8. NAVIGATION
+   ========================================================= */
+
+.nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.nav a {
+    color: #ffffff;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* Active navigation */
+
+.nav a.active {
+    color: #38bdf8;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   9. BUTTON RESET
+   ========================================================= */
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   10. PRIMARY BUTTON
+   ========================================================= */
+
+.primary-button {
+    display: inline-block;
+
+    background-color: #2563eb;
+
+    color: #ffffff;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.primary-button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* =========================================================
+   11. SECONDARY BUTTON
+   ========================================================= */
+
+.secondary-button {
+    display: inline-block;
+
+    background-color: #e5e7eb;
+
+    color: #111827;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.secondary-button:hover {
+    background-color: #d1d5db;
+}
+
+
+/* =========================================================
+   12. FORM LABEL
+   ========================================================= */
+
+label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+
+/* =========================================================
+   13. INPUT / SELECT / TEXTAREA
+   ========================================================= */
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 6px;
+
+    background-color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 2px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   14. FORM GROUP
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   15. PAGE HEADING
+   ========================================================= */
+
+.page-heading {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 35px auto 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.page-heading h1 {
+    font-size: 30px;
+
+    color: #111827;
+}
+
+
+.page-heading p {
+    margin-top: 5px;
+
+    color: #6b7280;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   16. COMMON SECTION
+   ========================================================= */
+
+.section {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 40px auto;
+}
+
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+
+.section-title h2 {
+    font-size: 24px;
+
+    color: #111827;
+}
+
+
+.section-title p {
+    margin-top: 5px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   17. COMMON CARD
+   ========================================================= */
+
+.card {
+    background-color: #ffffff;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================================
+   18. TABLE
+   ========================================================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    background-color: #ffffff;
+
+    border-radius: 10px;
+
+    border: 1px solid #e5e7eb;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 800px;
+}
+
+
+th,
+td {
+    padding: 14px 16px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 14px;
+}
+
+
+th {
+    background-color: #f9fafb;
+
+    color: #374151;
+
+    font-weight: 600;
+}
+
+
+td {
+    color: #4b5563;
+}
+
+
+tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   19. STATUS
+   ========================================================= */
+
+.status {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.status.active {
+    background-color: #dcfce7;
+
+    color: #166534;
+}
+
+
+.status.confirmed {
+    background-color: #dbeafe;
+
+    color: #1d4ed8;
+}
+
+
+.status.pending {
+    background-color: #fef3c7;
+
+    color: #92400e;
+}
+
+
+.status.cancelled {
+    background-color: #fee2e2;
+
+    color: #b91c1c;
+}
+
+
+.status.blocked {
+    background-color: #fee2e2;
+
+    color: #991b1b;
+}
+
+
+.status.disabled {
+    background-color: #e5e7eb;
+
+    color: #374151;
+}
+
+
+/* =========================================================
+   20. ACTION BUTTONS
+   ========================================================= */
+
+.action-buttons {
+    display: flex;
+
+    gap: 8px;
+
+    align-items: center;
+}
+
+
+.action-buttons button {
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* View */
+
+.view-button {
+    background-color: #dbeafe;
+
+    color: #1d4ed8;
+}
+
+
+.view-button:hover {
+    background-color: #bfdbfe;
+}
+
+
+/* Edit */
+
+.edit-button {
+    background-color: #fef3c7;
+
+    color: #92400e;
+}
+
+
+.edit-button:hover {
+    background-color: #fde68a;
+}
+
+
+/* Disable / Block / Cancel */
+
+.disable-button,
+.block-button,
+.cancel-button {
+    background-color: #fee2e2;
+
+    color: #b91c1c;
+}
+
+
+.disable-button:hover,
+.block-button:hover,
+.cancel-button:hover {
+    background-color: #fecaca;
+}
+
+
+/* Activate */
+
+.activate-button {
+    background-color: #dcfce7;
+
+    color: #166534;
+}
+
+
+.activate-button:hover {
+    background-color: #bbf7d0;
+}
+
+
+/* =========================================================
+   21. SUMMARY CARD
+   ========================================================= */
+
+.summary-card {
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+.summary-card h3 {
+    font-size: 14px;
+
+    color: #6b7280;
+
+    margin-bottom: 8px;
+}
+
+
+.summary-card p {
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #111827;
+}
+
+
+.summary-card small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   22. FOOTER
+   ========================================================= */
+
+footer {
+    background-color: #111827;
+
+    color: #ffffff;
+
+    margin-top: 0;
+}
+
+
+.footer-container {
+    width: 100%;
+
+    /* max-width: 1500px; */
+
+    margin: 0 auto;
+
+    padding: 30px 0;
+
+    text-align: center;
+}
+
+
+.footer-container p {
+    color: #d1d5db;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   23. RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px 0;
+    }
+
+
+    .nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    .page-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 25px;
+    }
+
+
+    .action-buttons {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================================
+   END OF COMMON CSS
+   ========================================================= */

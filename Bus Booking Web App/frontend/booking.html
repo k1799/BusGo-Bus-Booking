@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusGo - Confirm Booking</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- Booking Page CSS -->
+    <link rel="stylesheet" href="css/booking.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <h2 class="logo">BusGo</h2>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <!-- <a href="buses.html">Buses</a> -->
+                <a href="my-bookings.html">My Bookings</a>
+                <a href="#" id="logoutLink">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="booking-page">
+
+            <!-- PAGE HEADING -->
+            <div class="section-title">
+                <h1>Confirm Your Booking</h1>
+                <p>Enter each passenger's details and confirm your bus ticket.</p>
+            </div>
+
+
+            <!-- BOOKING LAYOUT -->
+            <div class="booking-layout">
+
+                <!-- LEFT: PASSENGER DETAILS -->
+                <div class="passenger-card">
+
+                    <h2>Passenger Details</h2>
+
+                    <p class="passenger-description">
+                        Enter the correct details for each selected seat.
+                    </p>
+
+                    <!-- Passenger forms will be created here by booking.js -->
+                    <form id="bookingForm" class="booking-form">
+
+                        <div id="passengerContainer">
+                            <!-- JavaScript adds one passenger form for every selected seat -->
+                        </div>
+
+                        <!-- Booking Message -->
+                        <div id="bookingMessage" class="booking-message"></div>
+
+                        <!-- =====================================================
+                           PAYMENT METHOD
+                         ===================================================== -->
+                        <section class="payment-section">
+
+                            <h2>Payment Method</h2>
+
+                            <p class="payment-subtitle">
+                                Select your preferred payment method
+                            </p>
+
+
+                            <div class="payment-options">
+
+                                <!-- Google Pay -->
+                                <label class="payment-option">
+
+                                    <input type="radio" name="paymentMethod" value="GOOGLE_PAY">
+
+                                    <div class="payment-option-content">
+
+                                        <strong>Google Pay</strong>
+
+                                        <span>
+                                            Pay using Google Pay
+                                        </span>
+
+                                    </div>
+
+                                </label>
+
+
+                                <!-- PhonePe -->
+                                <label class="payment-option">
+
+                                    <input type="radio" name="paymentMethod" value="PHONEPE">
+
+                                    <div class="payment-option-content">
+
+                                        <strong>PhonePe</strong>
+
+                                        <span>
+                                            Pay using PhonePe
+                                        </span>
+
+                                    </div>
+
+                                </label>
+
+
+                                <!-- UPI -->
+                                <label class="payment-option">
+
+                                    <input type="radio" name="paymentMethod" value="UPI">
+
+                                    <div class="payment-option-content">
+
+                                        <strong>UPI</strong>
+
+                                        <span>
+                                            Pay using UPI ID
+                                        </span>
+
+                                    </div>
+
+                                </label>
+
+                            </div>
+
+                        </section>
+
+                        <!-- Confirm Button -->
+                        <button type="submit" id="continueBookingButton" class="confirm-booking-button">
+                            Confirm Booking
+                        </button>
+
+                    </form>
+                </div>
+
+
+                <!-- RIGHT: BOOKING SUMMARY -->
+                <aside class="booking-summary-card">
+
+                    <h2>Booking Summary</h2>
+
+                    <!-- SELECTED BUS -->
+                    <div class="selected-bus">
+                        <h3 id="busName">Bus Name</h3>
+
+                        <p>
+                            Bus Number:
+                            <strong id="busNumber">-</strong>
+                        </p>
+                    </div>
+
+
+                    <!-- JOURNEY DETAILS -->
+                    <div class="booking-journey">
+
+                        <div class="booking-journey-row">
+                            <span>Route</span>
+                            <strong id="busRoute">-</strong>
+                        </div>
+
+                        <div class="booking-journey-row">
+                            <span>Journey Date</span>
+                            <strong id="journeyDate">Loading...</strong>
+                        </div>
+
+                        <div class="booking-journey-row">
+                            <span>Departure</span>
+                            <strong id="departureTime">-</strong>
+                        </div>
+
+                        <div class="booking-journey-row">
+                            <span>Arrival</span>
+                            <strong id="arrivalTime">-</strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- SELECTED SEATS -->
+                    <div class="booking-journey">
+                        <div class="booking-journey-row">
+                            <span>Selected Seats</span>
+                            <strong id="selectedSeat">-</strong>
+                        </div>
+
+                        <div class="booking-journey-row">
+                            <span>Passenger Count</span>
+                            <strong id="passengerCount">0</strong>
+                        </div>
+                    </div>
+
+
+                    <!-- PRICE DETAILS -->
+                    <div class="price-details">
+
+                        <div class="price-row">
+                            <span>Seat Fare</span>
+                            <strong id="seatFare">₹0</strong>
+                        </div>
+
+                        <div class="price-row">
+                            <span>GST (5%)</span>
+                            <strong id="gstAmount">₹0</strong>
+                        </div>
+
+                        <div class="total-price">
+                            <span>Total Amount</span>
+                            <strong id="totalAmount">₹0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- BOOKING INFORMATION -->
+                    <div class="booking-information">
+                        <h3>Booking Information</h3>
+                        <p>
+                            Each selected seat must have one passenger.
+                            Please verify all passenger details before confirming.
+                        </p>
+                    </div>
+
+                </aside>
+
+            </div>
+        </section>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <p>© 2026 BusGo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- Booking JavaScript -->
+    <script src="js/booking.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BusGo - Admin Dashboard</title>
+
+    <!-- Common styles -->
+    <link rel="stylesheet" href="../css/common.css">
+
+    <!-- Admin common styles -->
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <!-- Dashboard page styles -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ADMIN HEADER
+         ===================================================== -->
+    <header class="admin-header">
+
+        <div class="admin-header-container">
+
+            <!-- Admin Logo -->
+            <a href="dashboard.html" class="admin-logo">
+                BusGo <span>Admin</span>
+            </a>
+
+            <!-- Admin Navigation -->
+            <nav class="admin-nav">
+
+                <!-- Current page -->
+                <a href="dashboard.html" class="active">
+                    Dashboard
+                </a>
+
+                <a href="buses.html">
+                    Buses
+                </a>
+
+                <a href="bookings.html">
+                    Bookings
+                </a>
+
+                <a href="users.html">
+                    Users
+                </a>
+
+                <!-- <a href="../index.html">
+                    Website
+                </a> -->
+
+                <a href="admin-login.html" class="logout">
+                    Logout
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN DASHBOARD
+         ===================================================== -->
+    <main class="admin-page">
+
+        <div class="admin-container">
+
+
+            <!-- =================================================
+                 DASHBOARD WELCOME
+                 ================================================= -->
+            <section class="dashboard-welcome">
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Welcome back, Admin. Manage your bus booking
+                    system from here.
+                </p>
+
+            </section>
+
+
+            <!-- =================================================
+                 SUMMARY CARDS
+                 ================================================= -->
+            <section class="dashboard-summary">
+
+
+                <!-- Total Buses -->
+                <article class="dashboard-summary-card">
+
+                    <span>
+                        Total Buses
+                    </span>
+
+                    <strong id="totalBuses">
+                        0
+                    </strong>
+
+                    <small>
+                        Active buses
+                    </small>
+
+                    <a href="buses.html" class="view-all-link">
+                        Manage Buses
+                    </a>
+
+                </article>
+
+
+                <!-- Total Bookings -->
+                <article class="dashboard-summary-card">
+
+                    <span>
+                        Total Bookings
+                    </span>
+
+                    <strong id="totalBookings">
+                        0
+                    </strong>
+
+                    <small>
+                        All bookings
+                    </small>
+
+                    <a href="bookings.html" class="view-all-link">
+                        View Bookings
+                    </a>
+
+                </article>
+
+
+                <!-- Registered Users -->
+                <article class="dashboard-summary-card">
+
+                    <span>
+                        Registered Users
+                    </span>
+
+                    <strong id="totalUsers">
+                        0
+                    </strong>
+
+                    <small>
+                        Registered customers
+                    </small>
+
+                    <a href="users.html" class="view-all-link">
+                        View Users
+                    </a>
+
+                </article>
+
+
+                <!-- Today's Bookings -->
+                <article class="dashboard-summary-card">
+
+                    <span>
+                        Today's Bookings
+                    </span>
+
+                    <strong id="todayBookings">
+                        0
+                    </strong>
+
+                    <small>
+                        Bookings today
+                    </small>
+
+                    <a href="bookings.html?filter=today" class="view-all-link">
+                        View Today
+                    </a>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 QUICK ACTIONS
+                 ================================================= -->
+            <!-- <section class="quick-actions">
+
+                <h2>
+                    Quick Actions
+                </h2>
+
+                <div class="quick-action-list">
+
+                    <a
+                        href="buses.html"
+                        class="quick-action">
+                        Manage Buses
+                    </a>
+
+                    <a
+                        href="bookings.html"
+                        class="quick-action">
+                        Manage Bookings
+                    </a>
+
+                    <a
+                        href="users.html"
+                        class="quick-action">
+                        Manage Users
+                    </a>
+
+                </div>
+
+            </section> -->
+
+
+            <!-- =================================================
+                 DASHBOARD CONTENT
+                 Bus Schedule + Recent Bookings
+                 ================================================= -->
+            <section class="dashboard-content">
+
+
+                <!-- =================================================
+                     TODAY'S BUS SCHEDULE
+                     ================================================= -->
+                <div class="dashboard-section">
+
+                    <h2>
+                        Today's Bus Schedule
+                    </h2>
+
+                    <div class="bus-schedule-list" id="busScheduleList">
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     RECENT BOOKINGS
+                     ================================================= -->
+                <div class="dashboard-section">
+
+                    <h2>
+                        Recent Bookings
+                    </h2>
+
+                    <div class="recent-bookings" id="recentBookings">
+
+                        <!-- View All -->
+                        <a href="bookings.html" class="view-all-link">
+                            View All Bookings
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 BusGo Admin. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Dashboard JavaScript -->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

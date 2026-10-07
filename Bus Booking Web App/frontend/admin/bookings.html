@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Bookings | BusGo Admin</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+
+    <!-- Admin common CSS -->
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <!-- Booking management page CSS -->
+    <link rel="stylesheet" href="../css/admin-bookings.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ADMIN HEADER
+         ===================================================== -->
+    <header class="admin-header">
+
+        <div class="admin-header-container">
+
+            <!-- Admin Logo -->
+            <a href="dashboard.html" class="admin-logo">
+                BusGo <span>Admin</span>
+            </a>
+
+            <!-- Admin Navigation -->
+            <nav class="admin-nav">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="buses.html">
+                    Buses
+                </a>
+
+                <a href="bookings.html" class="active">
+                    Bookings
+                </a>
+
+                <a href="users.html">
+                    Users
+                </a>
+
+                <!-- <a href="../index.html">
+                    Website
+                </a> -->
+
+                <a href="admin-login.html" class="logout">
+                    Logout
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+    <main class="admin-bookings-page">
+
+        <div class="admin-container">
+
+            <!-- =================================================
+                 PAGE HEADER
+                 ================================================= -->
+            <section class="admin-page-header">
+
+                <div>
+
+                    <h1>
+                        Manage Bookings
+                    </h1>
+
+                    <p>
+                        View and manage all customer bus bookings.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 BOOKING SUMMARY
+                 ================================================= -->
+            <section class="booking-summary">
+
+                <!-- Total Bookings -->
+                <div class="booking-summary-card">
+
+                    <span>
+                        Total Bookings
+                    </span>
+
+                    <strong id="totalBookings">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <!-- Confirmed Bookings -->
+                <div class="booking-summary-card">
+
+                    <span>
+                        Confirmed
+                    </span>
+
+                    <strong id="confirmedBookings">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <!-- Cancelled Bookings -->
+                <div class="booking-summary-card">
+
+                    <span>
+                        Cancelled
+                    </span>
+
+                    <strong id="cancelledBookings">
+                        0
+                    </strong>
+
+                </div>
+
+                <!-- Booking Value -->
+                <div class="booking-summary-card">
+
+                    <span>
+                        Booking Value
+                    </span>
+
+                    <strong id="bookingValue">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <!-- Confirmed Value -->
+                <div class="booking-summary-card">
+
+                    <span>
+                        Confirmed Value
+                    </span>
+
+                    <strong id="confirmedValue">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <!-- Cancelled Value -->
+                <div class="booking-summary-card">
+
+                    <span>
+                        Cancelled Value
+                    </span>
+
+                    <strong id="cancelledValue">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <!-- Net Revenue -->
+                <!-- <div class="booking-summary-card">
+
+                    <span>
+                        Net Revenue
+                    </span>
+
+                    <strong id="netRevenue">
+                        ₹0
+                    </strong>
+
+                </div> -->
+
+            </section>
+
+
+            <!-- =================================================
+                 SEARCH / FILTER SECTION
+                 ================================================= -->
+            <section class="booking-filter-section">
+
+                <div class="booking-table-header">
+
+                    <div>
+
+                        <h2>
+                            Booking List
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Filter Form -->
+                <div class="booking-filter-form">
+
+                    <!-- Search Booking -->
+                    <div class="booking-filter-group">
+
+                        <label for="bookingSearch">
+                            Search
+                        </label>
+
+                        <input type="text" id="bookingSearch" placeholder="Booking ID or passenger name">
+
+                    </div>
+
+
+                    <!-- Bus Filter -->
+                    <div class="booking-filter-group">
+
+                        <label for="busFilter">
+                            Bus
+                        </label>
+
+                        <select id="busFilter">
+
+                            <option value="all">
+                                All Buses
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Status Filter -->
+                    <div class="booking-filter-group">
+
+                        <label for="statusFilter">
+                            Status
+                        </label>
+
+                        <select id="statusFilter">
+
+                            <option value="all">
+                                All Status
+                            </option>
+
+                            <option value="confirmed">
+                                Confirmed
+                            </option>
+
+
+
+                            <option value="cancelled">
+                                Cancelled
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Journey Date Filter -->
+                    <div class="booking-filter-group">
+
+                        <label for="bookingDate">
+                            Journey Date
+                        </label>
+
+                        <input type="date" id="bookingDate">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 BOOKINGS TABLE
+                 ================================================= -->
+            <section class="booking-table-section">
+
+                <div class="admin-table-container">
+
+                    <table class="booking-management-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Booking ID</th>
+                                <th>Passenger</th>
+                                <th>Bus</th>
+                                <th>Route</th>
+                                <th>Journey Date</th>
+                                <th>Seat</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="bookingTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 BOOKING DETAILS
+                 ================================================= -->
+            <section class="booking-details-section" id="bookingDetails">
+
+                <!-- Details Header -->
+                <!-- <div class="booking-details-header">
+
+                    <h2>
+                        Booking Details
+                    </h2>
+
+                    <button type="button" class="close-booking-details" id="closeBookingDetails">
+                        Close
+                    </button>
+
+                </div> -->
+                <div class="booking-details-header">
+
+                    <h2>
+                        Booking Details
+                    </h2>
+
+                    <div class="booking-details-actions">
+
+                        <button type="button" class="send-driver-btn" id="sendDriverBtn">
+                            Send to Driver
+                        </button>
+
+                        <button type="button" class="close-booking-details" id="closeBookingDetails">
+                            Close
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Details Grid -->
+                <div class="booking-details-grid">
+
+
+                    <!-- =================================================
+                         BOOKING INFORMATION
+                         ================================================= -->
+                    <div class="booking-details-card">
+
+                        <h3>
+                            Booking Information
+                        </h3>
+
+                        <div class="booking-detail-row">
+
+                            <span class="booking-detail-label">
+                                Booking ID
+                            </span>
+
+                            <span class="booking-detail-value" id="detailBookingId">
+                                BG20260928001
+                            </span>
+
+                        </div>
+
+
+                        <div class="booking-detail-row">
+
+                            <span class="booking-detail-label">
+                                Booking Status
+                            </span>
+
+                            <span class="booking-detail-value" id="detailStatus">
+                                Confirmed
+                            </span>
+
+                        </div>
+
+
+                        <div class="booking-detail-row">
+
+                            <span class="booking-detail-label">
+                                Booking Date
+                            </span>
+
+                            <span class="booking-detail-value" id="detailBookingDate">
+                                -
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                     PASSENGER INFORMATION
+                     ================================================= -->
+                    <div class="booking-details-card">
+
+                        <h3>
+                            Passenger Information
+                        </h3>
+
+
+                        <!-- All Passengers -->
+                        <div id="passengerList">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         JOURNEY INFORMATION
+                         ================================================= -->
+                    <div class="booking-details-card">
+
+                        <h3>
+                            Journey Information
+                        </h3>
+
+                        <div class="booking-detail-row">
+
+                            <span class="booking-detail-label">
+                                Bus
+                            </span>
+
+                            <span class="booking-detail-value" id="detailBus">
+                                Madurai Express
+                            </span>
+
+                        </div>
+
+
+                        <div class="booking-detail-row">
+
+                            <span class="booking-detail-label">
+                                Route
+                            </span>
+
+                            <span class="booking-detail-value" id="detailRoute">
+                                Madurai → Chennai
+                            </span>
+
+                        </div>
+
+
+                        <div class="booking-detail-row">
+
+                            <span class="booking-detail-label">
+                                Seat
+                            </span>
+
+                            <span class="booking-detail-value" id="detailSeat">
+                                05
+                            </span>
+
+                        </div>
+
+
+                        <div class="booking-detail-row">
+
+                            <span class="booking-detail-label">
+                                Journey Date
+                            </span>
+
+                            <span class="booking-detail-value" id="detailDate">
+                                28 Sep 2026
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         PAYMENT INFORMATION
+                         ================================================= -->
+                    <div class="booking-details-card booking-payment-card">
+
+                        <h3>
+                            Payment Information
+                        </h3>
+
+                        <div class="booking-detail-row">
+
+                            <span class="booking-detail-label">
+                                Seat Fare
+                            </span>
+
+                            <span class="booking-detail-value" id="detailSeatFare">
+                                ₹600
+                            </span>
+
+                        </div>
+
+
+                        <div class="booking-detail-row">
+
+                            <span class="booking-detail-label">
+                                GST (5%)
+                            </span>
+
+                            <span class="booking-detail-value" id="detailGst">
+                                ₹0
+                            </span>
+
+                        </div>
+
+
+                        <div class="booking-payment-total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong id="detailAmount">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="booking-detail-row">
+
+                            <span class="booking-detail-label">
+                                Payment
+                            </span>
+
+                            <span class="booking-detail-value" id="detailPayment">
+                                Paid
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 NO BOOKINGS MESSAGE
+                 ================================================= -->
+            <div class="no-bookings" id="noBookings">
+
+                <h3>
+                    No Bookings Found
+                </h3>
+
+                <p>
+                    No bookings match the selected search or filters.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+    <footer class="footer-container">
+
+        <p>
+            © 2026 BusGo. Admin Panel.
+        </p>
+
+    </footer>
+
+
+    <!-- Booking Management JavaScript -->
+    <script src="../js/admin-bookings.js"></script>
+
+</body>
+
+</html>

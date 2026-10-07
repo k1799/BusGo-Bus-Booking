@@ -1,0 +1,767 @@
+/* =========================================================
+   BUSGO - HOME PAGE CSS
+   Used only by index.html
+   ========================================================= */
+
+
+/* =========================================================
+   1. HERO SECTION
+   ========================================================= */
+
+.hero {
+    /* min-height: 500px;
+
+    background:
+        linear-gradient(
+            rgba(17, 24, 39, 0.90),
+            rgba(17, 24, 39, 0.90)
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px; */
+
+    min-height: 540px;
+
+    background:
+        linear-gradient(rgba(17, 24, 39, 0.62),
+            rgba(17, 24, 39, 0.72)),
+        url("../images/BUSGO\ Coach\ at\ Sunset.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px 130px;
+
+    position: relative;
+
+
+}
+
+
+/* Hero content */
+
+.hero-content {
+    width: 90%;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+
+/* Small hero text */
+
+.hero-content>p:first-child {
+    color: #38bdf8;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero-tagline {
+    color: #38bdf8;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* Hero heading */
+
+.hero h1 {
+    color: #ffffff;
+
+    font-size: 52px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+
+    font-weight: 700;
+
+    animation: slideDown 0.8s ease;
+    
+}
+
+/* Hero heading animation */
+
+/* @keyframes heroHeadingDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+} */
+
+@keyframes slideDown {
+
+    from {
+        transform: translateY(-80px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+
+}
+
+
+
+.hero-description {
+    color: #e5e7eb;
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+/* Hero description */
+
+.hero-content>p:nth-of-type(2) {
+    color: #e5e7eb;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   2. SEARCH SECTION
+   ========================================================= */
+
+.search-section {
+    width: 90%;
+
+    max-width: 1100px;
+
+    /* margin: -45px auto 50px;
+
+    position: relative;
+
+    z-index: 2; */
+
+
+    margin: -70px auto 70px;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+/* Search box */
+
+.search-box {
+    background-color: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.14);
+
+    border: 1px solid #e5e7eb;
+}
+
+
+/* Search heading */
+
+.search-box h2 {
+    font-size: 24px;
+
+    color: #111827;
+
+    margin-bottom: 25px;
+
+    font-weight: 700;
+}
+
+
+/* Search form */
+
+.search-form {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr auto;
+
+    gap: 15px;
+
+    align-items: end;
+}
+
+
+/* Search form groups */
+
+.search-form .form-group {
+    margin-bottom: 0;
+}
+
+
+/* Search button */
+
+.search-form button {
+    /* height: 43px;
+
+    padding: 0 24px;
+
+    background-color: #2563eb;
+
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: 600; */
+    height: 46px;
+
+    padding: 0 28px;
+
+    background-color: #2563eb;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.search-form button:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   3. OUR BUSES SECTION
+   ========================================================= */
+
+
+/* =========================================================
+   4. ABOUT SECTION
+   ========================================================= */
+.about-section,
+.why-section,
+.contact-section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.about-section {
+    /* width: 90%;
+
+    max-width: 1000px;
+
+    margin: 80px auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    align-items: center; */
+
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 80px auto;
+
+    padding: 50px 30px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+
+/* About content */
+
+.about-content {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.about-content h2 {
+    font-size: 30px;
+
+    color: #111827;
+
+    margin-bottom: 15px;
+}
+
+
+.about-content p {
+    color: #6b7280;
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+/* About highlight */
+
+.about-highlight {
+    background-color: #eff6ff;
+
+    border-left: 4px solid #2563eb;
+
+    padding: 18px;
+
+    margin-top: 20px;
+
+    border-radius: 5px;
+}
+
+
+.about-highlight p {
+    margin: 0;
+
+    color: #374151;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   5. WHY CHOOSE US
+   ========================================================= */
+
+.why-section {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 70px auto;
+}
+
+
+.why-section .section-title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+/* Feature cards */
+
+.feature-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Feature card */
+
+.feature-card {
+    /* background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    text-align: center; */
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 30px 25px;
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #bfdbfe;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card h3 {
+    color: #111827;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+
+.feature-card p {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* Feature icon */
+
+.feature-icon {
+    /* width: 55px;
+
+    height: 55px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background-color: #eff6ff;
+
+    color: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px; */
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background-color: #eff6ff;
+
+    color: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   6. CONTACT SECTION
+   ========================================================= */
+
+.contact-section {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 70px auto;
+
+    text-align: center;
+}
+
+
+.contact-section .section-title {
+    margin-bottom: 30px;
+}
+
+
+/* Contact information */
+
+.contact-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Contact card */
+
+.contact-card {
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    transition: 0.25s;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.contact-card h3 {
+    color: #111827;
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+
+.contact-card p {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+.search-form select,
+.search-form input {
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    background-color: #ffffff;
+
+    color: #111827;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.search-form select:focus,
+.search-form input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+/* =========================================================
+   7. RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Search */
+
+    .search-form {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    /* Bus cards */
+
+    .bus-cards {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    /* Features */
+
+    .feature-cards {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    /* Contact */
+
+    .contact-info {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    /* Hero */
+
+    .hero {
+        min-height: 470px;
+
+        padding: 70px 20px 110px;
+    }
+
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-content>p:nth-of-type(2) {
+        font-size: 16px;
+    }
+
+
+    /* Search */
+
+    .search-section {
+        width: 92%;
+
+        margin-top: -50px;
+    }
+
+     .search-box {
+        padding: 22px;
+    }
+
+    .search-form {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Bus cards */
+
+    .bus-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* About */
+
+    .about-section {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    /* Features */
+
+    .feature-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Contact */
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+
+    .hero {
+        min-height: 450px;
+
+        padding:
+            60px 15px
+            100px;
+    }
+
+
+    .hero-tagline {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .search-section {
+        width: 94%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+
+    .hero-content>p:nth-of-type(2) {
+        font-size: 14px;
+    }
+
+
+    .search-box {
+        padding: 18px;
+        border-radius: 10px;
+    }
+
+
+    .about-content h2 {
+        font-size: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   END OF HOME CSS
+   ========================================================= */

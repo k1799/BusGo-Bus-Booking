@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BusGo - Select Seat</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- Bus Details Page CSS -->
+    <link rel="stylesheet" href="css/bus-details.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+     HEADER
+     ===================================================== -->
+    <header>
+
+        <div class="header-container">
+
+            <!-- Website Logo -->
+            <h2 class="logo">BusGo</h2>
+
+            <!-- Navigation -->
+            <nav class="nav">
+
+                <a href="index.html">Home</a>
+
+                <!-- <a href="buses.html">Buses</a> -->
+
+                <a href="my-bookings.html">My Bookings</a>
+
+                <a href="#" id="logoutLink">Logout</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+     MAIN CONTENT
+     ===================================================== -->
+    <main>
+
+        <section class="bus-details-page">
+
+
+            <!-- =================================================
+             BUS INFORMATION
+             ================================================= -->
+            <div class="bus-details-card">
+
+                <h2 id="busName">Madurai Express</h2>
+
+                <p class="bus-details-number" id="busNumber">
+                    Bus Number
+                </p>
+
+
+                <!-- Journey Information -->
+                <div class="journey-info">
+
+                    <!-- Route -->
+                    <div class="journey-item">
+
+                        <span>Route</span>
+
+                        <strong id="busRoute">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Departure -->
+                    <div class="journey-item">
+
+                        <span>Departure</span>
+
+                        <strong id="departureTime">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Arrival -->
+                    <div class="journey-item">
+
+                        <span>Arrival</span>
+
+                        <strong id="arrivalTime">
+                            -
+                        </strong>
+
+                    </div>
+                    <!-- Journey Date -->
+                    <div class="journey-item">
+
+                        <span>Journey Date</span>
+
+                        <strong id="journeyDate">
+                            -
+                        </strong>
+
+                    </div>
+
+                    <!-- Fare -->
+                    <div class="journey-item">
+
+                        <span>Fare</span>
+
+                        <strong id="busFare">
+                            ₹0 / Seat
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+             SEAT SELECTION SECTION
+             ================================================= -->
+            <section class="seat-selection-section">
+
+                <h2>Select Your Seat</h2>
+
+                <p>
+                    Choose an available seat from the bus layout.
+                </p>
+
+
+                <!-- =================================================
+                 SEAT LEGEND
+                 ================================================= -->
+                <div class="seat-legend">
+
+                    <div class="legend-item">
+
+                        <span class="legend-seat available"></span>
+
+                        <span>Available</span>
+
+                    </div>
+
+
+                    <div class="legend-item">
+
+                        <span class="legend-seat selected"></span>
+
+                        <span>Selected</span>
+
+                    </div>
+
+
+                    <div class="legend-item">
+
+                        <span class="legend-seat booked"></span>
+
+                        <span>Booked</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                 BUS SEAT AREA
+                 ================================================= -->
+                <div class="seat-area">
+
+
+                    <!-- Driver Area -->
+                    <div class="driver-area">
+
+                        <span>Driver</span>
+
+                        <span class="driver-icon">
+                            🚍
+                        </span>
+
+                    </div>
+
+
+                    <!-- Seat Layout -->
+                    <div class="seat-layout">
+
+
+                        <!-- Row 1 -->
+                        <div class="seat-row">
+
+                            <button type="button" class="seat available" data-seat="1">
+                                01
+                            </button>
+
+                            <button type="button" class="seat available" data-seat="2">
+                                02
+                            </button>
+
+                            <span class="aisle"></span>
+
+                            <button type="button" class="seat booked" data-seat="3" disabled>
+                                03
+                            </button>
+
+                            <button type="button" class="seat available" data-seat="4">
+                                04
+                            </button>
+
+                        </div>
+
+
+                        <!-- Row 2 -->
+                        <div class="seat-row">
+
+                            <button type="button" class="seat available" data-seat="5">
+                                05
+                            </button>
+
+                            <button type="button" class="seat available" data-seat="6">
+                                06
+                            </button>
+
+                            <span class="aisle"></span>
+
+                            <button type="button" class="seat available" data-seat="7">
+                                07
+                            </button>
+
+                            <button type="button" class="seat booked" data-seat="8" disabled>
+                                08
+                            </button>
+
+                        </div>
+
+
+                        <!-- Row 3 -->
+                        <div class="seat-row">
+
+                            <button type="button" class="seat available" data-seat="9">
+                                09
+                            </button>
+
+                            <button type="button" class="seat booked" data-seat="10" disabled>
+                                10
+                            </button>
+
+                            <span class="aisle"></span>
+
+                            <button type="button" class="seat available" data-seat="11">
+                                11
+                            </button>
+
+                            <button type="button" class="seat available" data-seat="12">
+                                12
+                            </button>
+
+                        </div>
+
+
+                        <!-- Row 4 -->
+                        <div class="seat-row">
+
+                            <button type="button" class="seat available" data-seat="13">
+                                13
+                            </button>
+
+                            <button type="button" class="seat available" data-seat="14">
+                                14
+                            </button>
+
+                            <span class="aisle"></span>
+
+                            <button type="button" class="seat booked" data-seat="15" disabled>
+                                15
+                            </button>
+
+                            <button type="button" class="seat available" data-seat="16">
+                                16
+                            </button>
+
+                        </div>
+
+
+                        <!-- Row 5 -->
+                        <div class="seat-row">
+
+                            <button type="button" class="seat available" data-seat="17">
+                                17
+                            </button>
+
+                            <button type="button" class="seat available" data-seat="18">
+                                18
+                            </button>
+
+                            <span class="aisle"></span>
+
+                            <button type="button" class="seat available" data-seat="19">
+                                19
+                            </button>
+
+                            <button type="button" class="seat available" data-seat="20">
+                                20
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+             BOOKING SUMMARY
+             ================================================= -->
+            <div class="booking-summary">
+
+                <h2>Booking Summary</h2>
+
+
+                <!-- Selected Seat -->
+                <div class="summary-row">
+
+                    <span>
+                        Selected Seat
+                    </span>
+
+                    <strong id="selectedSeat">
+                        None
+                    </strong>
+
+                </div>
+
+
+                <!-- Seat Fare -->
+                <div class="summary-row">
+
+                    <span>
+                        Seat Fare
+                    </span>
+
+                    <strong id="seatFare">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <!-- Continue Button -->
+                <button type="button" id="continueButton" class="continue-button" disabled>
+                    Continue Booking
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+     FOOTER
+     ===================================================== -->
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 BusGo. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bus Details JavaScript -->
+    <script src="js/bus-details.js"></script>
+
+</body>
+
+</html>

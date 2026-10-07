@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Users | BusGo Admin</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+
+    <!-- Admin Common CSS -->
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <!-- Users Page CSS -->
+    <link rel="stylesheet" href="../css/admin-users.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         ADMIN HEADER
+         ===================================================== -->
+    <header class="admin-header">
+
+        <div class="admin-header-container">
+
+            <!-- Admin Logo -->
+            <a href="dashboard.html" class="admin-logo">
+                BusGo <span>Admin</span>
+            </a>
+
+
+            <!-- Admin Navigation -->
+            <nav class="admin-nav">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="buses.html">
+                    Buses
+                </a>
+
+                <a href="bookings.html">
+                    Bookings
+                </a>
+
+                <a href="users.html" class="active">
+                    Users
+                </a>
+
+                <!-- <a href="../index.html">
+                    Website
+                </a> -->
+
+                <a href="admin-login.html" class="logout">
+                    Logout
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+    <main class="admin-users-page">
+
+        <div class="admin-container">
+
+
+            <!-- =================================================
+                 PAGE HEADER
+                 ================================================= -->
+            <section class="admin-page-header">
+
+                <div>
+
+                    <h1>
+                        Manage Users
+                    </h1>
+
+                    <p>
+                        View and manage registered BusGo customers.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 USER SUMMARY
+                 ================================================= -->
+            <section class="user-summary">
+
+
+                <!-- Total Users -->
+                <div class="user-summary-card">
+
+                    <span>
+                        Total Users
+                    </span>
+
+                    <strong id="totalUsers">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <!-- Active Users -->
+                <div class="user-summary-card">
+
+                    <span>
+                        Active Users
+                    </span>
+
+                    <strong id="activeUsers">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <!-- Blocked Users -->
+                <div class="user-summary-card">
+
+                    <span>
+                        Blocked Users
+                    </span>
+
+                    <strong id="blockedUsers">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <!-- New Users -->
+                <!-- <div class="user-summary-card">
+
+                    <span>
+                        New Users
+                    </span>
+
+                    <strong id="newUsers">
+                        0
+                    </strong>
+
+                </div> -->
+
+            </section>
+
+
+            <!-- =================================================
+                 USER SEARCH / FILTER
+                 ================================================= -->
+            <section class="user-filter-section">
+
+
+                <!-- Section Heading -->
+                <div class="user-table-header">
+
+                    <div>
+
+                        <h2>
+                            User List
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Filter Form -->
+                <div class="user-filter-form">
+
+
+                    <!-- Search User -->
+                    <div class="user-filter-group">
+
+                        <label for="userSearch">
+                            Search User
+                        </label>
+
+                        <input type="text" id="userSearch" placeholder="Name, email or phone number">
+
+                    </div>
+
+
+                    <!-- User Status -->
+                    <div class="user-filter-group">
+
+                        <label for="userStatus">
+                            Status
+                        </label>
+
+                        <select id="userStatusFilter">
+
+                            <option value="all">
+                                All Users
+                            </option>
+
+                            <option value="active">
+                                Active
+                            </option>
+
+                            <option value="blocked">
+                                Blocked
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 USERS TABLE
+                 ================================================= -->
+            <section class="user-table-section">
+
+
+                <div class="admin-table-container">
+
+                    <table class="user-management-table">
+
+
+                        <!-- Table Header -->
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    User ID
+                                </th>
+
+                                <th>
+                                    Name
+                                </th>
+
+                                <th>
+                                    Email
+                                </th>
+
+                                <th>
+                                    Phone
+                                </th>
+
+                                <th>
+                                    Registered Date
+                                </th>
+
+                                <th>
+                                    Total Bookings
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Actions
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <!-- Table Body -->
+                        <tbody id="userTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 USER DETAILS
+                 ================================================= -->
+            <section class="user-details-section" id="userDetails">
+
+
+                <!-- Details Header -->
+                <div class="user-details-header">
+
+                    <h2>
+                        User Details
+                    </h2>
+
+                    <button type="button" class="close-user-details" id="closeUserDetails">
+                        Close
+                    </button>
+
+                </div>
+
+
+                <!-- Details Grid -->
+                <div class="user-details-grid">
+
+
+                    <!-- =================================================
+                         BASIC INFORMATION
+                         ================================================= -->
+                    <div class="user-details-card">
+
+                        <h3>
+                            Basic Information
+                        </h3>
+
+
+                        <div class="user-detail-row">
+
+                            <span class="user-detail-label">
+                                User ID
+                            </span>
+
+                            <span class="user-detail-value" id="detailUserId">
+                                -
+                            </span>
+
+                        </div>
+
+
+                        <div class="user-detail-row">
+
+                            <span class="user-detail-label">
+                                Name
+                            </span>
+
+                            <span class="user-detail-value" id="detailUserName">
+                                Kannan
+                            </span>
+
+                        </div>
+
+
+                        <div class="user-detail-row">
+
+                            <span class="user-detail-label">
+                                Email
+                            </span>
+
+                            <span class="user-detail-value" id="detailUserEmail">
+                                -
+                            </span>
+
+                        </div>
+
+
+                        <div class="user-detail-row">
+
+                            <span class="user-detail-label">
+                                Phone
+                            </span>
+
+                            <span class="user-detail-value" id="detailUserPhone">
+                                -
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         ACCOUNT INFORMATION
+                         ================================================= -->
+                    <div class="user-details-card">
+
+                        <h3>
+                            Account Information
+                        </h3>
+
+
+                        <div class="user-detail-row">
+
+                            <span class="user-detail-label">
+                                Registered Date
+                            </span>
+
+                            <span class="user-detail-value" id="detailRegisteredDate">
+                                -
+                            </span>
+
+                        </div>
+
+
+                        <div class="user-detail-row">
+
+                            <span class="user-detail-label">
+                                Account Status
+                            </span>
+
+                            <span class="user-detail-value" id="detailUserStatus">
+                                -
+                            </span>
+
+                        </div>
+
+
+                        <div class="user-detail-row">
+
+                            <span class="user-detail-label">
+                                Total Bookings
+                            </span>
+
+                            <span class="user-detail-value" id="detailBookingCount">
+                                0
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         BOOKING INFORMATION
+                         ================================================= -->
+                    <div class="user-details-card user-booking-information">
+
+                        <h3>
+                            Booking Information
+                        </h3>
+
+
+                        <div class="user-detail-row">
+
+                            <span class="user-detail-label">
+                                Upcoming Bookings
+                            </span>
+
+                            <span class="user-detail-value" id="detailUpcomingBookings">
+                                0
+                            </span>
+
+                        </div>
+
+
+                        <div class="user-detail-row">
+
+                            <span class="user-detail-label">
+                                Completed Bookings
+                            </span>
+
+                            <span class="user-detail-value" id="detailCompletedBookings">
+                                0
+                            </span>
+
+                        </div>
+
+
+                        <div class="user-detail-row">
+
+                            <span class="user-detail-label">
+                                Cancelled Bookings
+                            </span>
+
+                            <span class="user-detail-value" id="detailCancelledBookings">
+                                0
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 NO USERS MESSAGE
+                 ================================================= -->
+            <div class="no-users" id="noUsers">
+
+                <h3>
+                    No Users Found
+                </h3>
+
+                <p>
+                    No users match the selected search or filter.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+    <footer class="footer-container">
+
+        <p>
+            © 2026 BusGo. Admin Panel.
+        </p>
+
+    </footer>
+
+
+    <!-- Users Management JavaScript -->
+    <script src="../js/admin-users.js"></script>
+
+
+</body>
+
+</html>

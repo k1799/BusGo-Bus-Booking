@@ -1,0 +1,749 @@
+/* =========================================================
+BUSGO - BUS DETAILS PAGE CSS
+
+Used only by:
+bus-details.html
+
+common.css handles:
+
+Header
+Navigation
+Buttons
+Footer
+Common styles
+
+This file handles only Bus Details page design.
+========================================================= */
+
+/* =========================================================
+
+BUS DETAILS PAGE
+========================================================= */
+
+.bus-details-page {
+
+    min-height: 70vh;
+
+    padding: 40px 20px 60px;
+
+}
+
+/* =========================================================
+2. BUS INFORMATION CARD
+========================================================= */
+
+.bus-details-card {
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+}
+
+/* Bus name */
+
+.bus-details-card h2 {
+
+    margin: 0 0 8px;
+
+    font-size: 24px;
+
+    color: #111318;
+
+}
+
+/* Bus number */
+
+.bus-details-number {
+
+    margin: 0 0 20px;
+
+    color: #666666;
+
+    font-size: 14px;
+
+}
+
+/* =========================================================
+3. JOURNEY INFORMATION
+========================================================= */
+
+.journey-info {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eeeeee;
+
+}
+
+/* Individual journey information */
+
+.journey-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    padding: 12px;
+
+    background-color: #f9fafb;
+
+    border-radius: 8px;
+
+}
+
+/* Label */
+
+.journey-item span {
+
+    font-size: 13px;
+
+    color: #777777;
+
+}
+
+/* Value */
+
+.journey-item strong {
+
+    font-size: 16px;
+
+    color: #111318;
+
+}
+
+/* =========================================================
+4. SEAT SELECTION SECTION
+========================================================= */
+
+.seat-selection-section {
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+}
+
+/* Heading */
+
+.seat-selection-section h2 {
+
+    margin: 0 0 10px;
+
+    text-align: center;
+
+    font-size: 22px;
+
+    color: #111318;
+
+}
+
+/* Description */
+
+.seat-selection-section>p {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    color: #666666;
+
+    font-size: 14px;
+
+}
+
+/* =========================================================
+5. SEAT LEGEND
+========================================================= */
+
+.seat-legend {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+
+}
+
+/* Legend item */
+
+.legend-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 13px;
+
+    color: #555555;
+
+}
+
+/* Legend seat */
+
+.legend-seat {
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 4px;
+
+    border: 1px solid #cccccc;
+
+}
+
+/* Available */
+
+.legend-seat.available {
+
+    background-color: #ffffff;
+
+}
+
+/* Selected */
+
+.legend-seat.selected {
+
+    background-color: #00a8cc;
+
+    border-color: #00a8cc;
+
+}
+
+/* Booked */
+
+.legend-seat.booked {
+
+    background-color: #d1d5db;
+
+    border-color: #d1d5db;
+
+}
+
+/* =========================================================
+6. BUS SEAT AREA
+========================================================= */
+
+.seat-area {
+
+    /* max-width: 420px;
+
+    margin: 0 auto;
+
+    padding: 25px;
+
+    background-color: #f8f9fa;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px; */
+
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto;
+    padding: 25px;
+
+    background-color: #f8f9fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    box-sizing: border-box;
+
+}
+
+/* =========================================================
+7. DRIVER AREA
+========================================================= */
+
+.driver-area {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    padding: 10px 15px;
+
+    margin-bottom: 20px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    border-bottom: 1px dashed #d1d5db;
+
+}
+
+/* Driver icon */
+
+.driver-icon {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 35px;
+
+    height: 35px;
+
+    background-color: #e5e7eb;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+
+}
+
+/* =========================================================
+8. SEAT LAYOUT
+========================================================= */
+
+.seat-layout {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+/* One row */
+
+.seat-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 35px 1fr 1fr;
+
+    gap: 10px;
+
+    align-items: center;
+
+}
+
+/* =========================================================
+9. SEAT BUTTON
+========================================================= */
+
+.seat {
+
+    width: 100%;
+
+    height: 45px;
+
+    border: 1px solid #cfd4da;
+
+    border-radius: 6px;
+
+    background-color: #ffffff;
+
+    color: #111318;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+/* =========================================================
+10. AVAILABLE SEAT
+========================================================= */
+
+.seat.available {
+
+    background-color: #f0fbfd;
+
+    border-color: #00a8cc;
+
+    /* transform: translateY(-2px); */
+
+}
+
+.seat.available:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+11. SELECTED SEAT
+========================================================= */
+
+.seat.selected {
+
+    background-color: #00a8cc;
+
+    border-color: #00a8cc;
+
+    color: #ffffff;
+
+}
+
+/* =========================================================
+12. BOOKED SEAT
+========================================================= */
+
+.seat.booked {
+
+    background-color: #d1d5db;
+
+    border-color: #d1d5db;
+
+    color: #777777;
+
+    cursor: not-allowed;
+
+}
+
+.seat.booked {
+
+    transform: none;
+
+}
+
+/* =========================================================
+13. AISLE
+========================================================= */
+
+.aisle {
+
+    width: 100%;
+
+    height: 1px;
+
+}
+
+/* =========================================================
+14. BOOKING SUMMARY
+========================================================= */
+
+.booking-summary {
+
+    /* background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); */
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto 30px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+    box-sizing: border-box;
+
+}
+
+/* Summary heading */
+
+.booking-summary h2 {
+
+    margin: 0 0 20px;
+
+    font-size: 20px;
+
+    color: #111318;
+
+}
+
+/* Summary row */
+
+.summary-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+/* Summary label */
+
+.summary-row span {
+
+    color: #666666;
+
+    font-size: 14px;
+
+}
+
+/* Summary value */
+
+.summary-row strong {
+
+    color: #111318;
+
+    font-size: 15px;
+
+}
+
+/* =========================================================
+15. CONTINUE BUTTON
+========================================================= */
+
+.continue-button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 13px 20px;
+
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #bfc3c8;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: not-allowed;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+.continue-button:not(:disabled) {
+
+    background-color: #111318;
+
+    /* transform: translateY(-1px); */
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+}
+
+/* Disabled button */
+
+/* .continue-button {
+
+background-color: #bfc3c8;
+
+cursor: not-allowed;
+
+transform: none;
+
+} */
+
+.continue-button:not(:disabled):hover {
+    background-color: #00a8cc;
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+16. RESPONSIVE DESIGN
+========================================================= */
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 900px) {
+
+    .journey-info {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+
+    .bus-details-page {
+
+        padding: 30px 20px 45px;
+    }
+
+
+    .bus-details-card {
+
+        padding: 20px;
+    }
+
+
+    .seat-selection-section {
+
+        padding: 20px;
+    }
+
+
+    .journey-info {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .seat-legend {
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+
+    .seat-area {
+
+        padding: 15px;
+    }
+
+
+    .seat-row {
+
+        grid-template-columns:
+            1fr 1fr 20px 1fr 1fr;
+
+        gap: 6px;
+    }
+
+
+    .seat {
+
+        height: 40px;
+
+        font-size: 11px;
+    }
+
+
+    .booking-summary {
+
+        padding: 20px;
+    }
+
+}
+
+/* ---------- Small Mobile ---------- */
+
+@media (max-width: 480px) {
+
+    .bus-details-page {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+
+    .bus-details-card h2 {
+
+        font-size: 20px;
+    }
+
+
+    .seat-selection-section h2 {
+
+        font-size: 19px;
+    }
+
+
+    .seat-area {
+
+        padding: 10px;
+    }
+
+
+    .seat-row {
+
+        grid-template-columns:
+            1fr 1fr 12px 1fr 1fr;
+
+        gap: 4px;
+    }
+
+
+    .seat {
+
+        height: 36px;
+
+        font-size: 10px;
+    }
+
+
+    .summary-row {
+
+        font-size: 13px;
+    }
+
+}
+
+/* =========================================================
+END OF BUS DETAILS CSS
+========================================================= */

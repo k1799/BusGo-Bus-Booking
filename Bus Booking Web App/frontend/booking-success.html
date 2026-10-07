@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BusGo - Booking Confirmed</title>
+
+    <!-- Common styles -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- Booking success page styles -->
+    <link rel="stylesheet" href="css/booking-success.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+    <header>
+
+        <div class="header-container">
+
+            <!-- Website Logo -->
+            <div class="logo">
+                <h2>BusGo</h2>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <!-- <a href="buses.html">Buses</a> -->
+                <a href="my-bookings.html">My Bookings</a>
+                <a href="#" id="logoutLink">Logout</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+    <main class="booking-success-page">
+
+
+        <!-- =========================
+             SUCCESS MESSAGE
+             ========================= -->
+        <section class="success-message">
+
+            <!-- Success Icon -->
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h1>
+                Booking Confirmed!
+            </h1>
+
+            <p>
+                Your bus ticket has been booked successfully.
+            </p>
+
+        </section>
+
+        <div id="ticketPdfContent">
+            <!-- =========================
+             TICKET CARD
+             ========================= -->
+            <section class="ticket-card">
+
+
+                <!-- =========================
+                 TICKET HEADER
+                 ========================= -->
+                <div class="ticket-header">
+
+                    <!-- BusGo information -->
+                    <div class="ticket-bus">
+
+                        <h2>
+                            BusGo
+                        </h2>
+
+                        <p>
+                            Bus Ticket
+                        </p>
+
+                    </div>
+
+
+                    <!-- Booking ID -->
+                    <div class="ticket-booking-id">
+
+                        <span>
+                            Booking ID
+                        </span>
+
+                        <strong id="bookingId">
+                            BG20260928001
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                 JOURNEY DETAILS
+                 ========================= -->
+                <div class="ticket-journey">
+
+                    <div class="ticket-location">
+
+                        <small>From</small>
+
+                        <strong id="fromLocation">--</strong>
+
+                        <span id="departureTime">--</span>
+
+                        <small id="journeyDate">--</small>
+
+                    </div>
+
+
+                    <div class="ticket-arrow">
+                        →
+                    </div>
+
+
+                    <div class="ticket-location">
+
+                        <small>To</small>
+
+                        <strong id="toLocation">--</strong>
+
+                        <span id="arrivalTime">--</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                 PASSENGER DETAILS
+                 ========================= -->
+                <div class="ticket-section">
+
+                    <h3>
+                        Passenger Details
+                    </h3>
+
+                    <div class="ticket-info-grid">
+
+
+                        <!-- Passenger Name -->
+                        <div class="ticket-info-item">
+
+                            <span>
+                                Passenger Name
+                            </span>
+
+                            <strong id="passengerName">
+                                Kannan
+                            </strong>
+
+                        </div>
+
+
+                        <!-- Seat Number -->
+                        <div class="ticket-info-item">
+
+                            <span>
+                                Seat Number
+                            </span>
+
+                            <strong id="seatNumber">
+                                05
+                            </strong>
+
+                        </div>
+
+
+                        <!-- Journey Date -->
+                        <div class="ticket-info-item">
+
+                            <span>
+                                Journey Date
+                            </span>
+
+                            <strong id="ticketJourneyDate">
+                                28 September 2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                 BUS DETAILS
+                 ========================= -->
+                <div class="ticket-section">
+
+                    <h3>
+                        Bus Details
+                    </h3>
+
+                    <div class="ticket-info-grid">
+
+
+                        <!-- Bus Name -->
+                        <div class="ticket-info-item">
+
+                            <span>
+                                Bus Name
+                            </span>
+
+                            <strong id="busName">
+                                Madurai Express
+                            </strong>
+
+                        </div>
+
+
+                        <!-- Bus Number -->
+                        <div class="ticket-info-item">
+
+                            <span>
+                                Bus Number
+                            </span>
+
+                            <strong id="busNumber">
+                                TN 58 AB 1234
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                 PAYMENT DETAILS
+                 ========================= -->
+                <div class="ticket-section ticket-fare">
+
+                    <h3>
+                        Payment Details
+                    </h3>
+
+
+                    <!-- Seat Fare -->
+                    <div class="fare-row">
+
+                        <span>
+                            Seat Fare
+                        </span>
+
+                        <strong id="seatFare">
+                            ₹600
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Booking Fee -->
+                    <div class="fare-row">
+                        <span>GST (5%)</span>
+                        <strong id="gstAmount">₹0</strong>
+                    </div>
+
+
+                    <!-- Total -->
+                    <div class="fare-row fare-total">
+
+                        <span>
+                            Total Paid
+                        </span>
+
+                        <strong id="totalAmount">
+                            ₹620
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Payment Status -->
+                    <div class="fare-row">
+
+                        <span>
+                            Booking Status
+                        </span>
+
+                        <strong class="payment-paid">
+                            Paid
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                 TICKET ACTIONS
+                 ========================= -->
+                <div class="ticket-actions">
+
+                    <!-- Download Ticket -->
+                    <button type="button" id="printTicketButton" class="print-ticket-button">
+                        Download Ticket
+                    </button>
+
+
+                    <!-- My Bookings -->
+                    <a href="my-bookings.html" class="ticket-action-link">
+                        My Bookings
+                    </a>
+
+
+                    <!-- Home -->
+                    <a href="index.html" class="ticket-action-link">
+                        Back to Home
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+             IMPORTANT INFORMATION
+             ========================= -->
+            <section class="travel-information">
+
+                <h3>
+                    Important Information
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Please reach the boarding point at least 15 minutes
+                        before departure.
+                    </li>
+
+                    <li>
+                        Keep your booking ID available during your journey.
+                    </li>
+
+                    <li>
+                        Carry a valid identity document while travelling.
+                    </li>
+
+                </ul>
+
+            </section>
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 BusGo. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <!-- Booking Success JavaScript -->
+    <script src="js/booking-success.js"></script>
+
+</body>
+
+</html>
